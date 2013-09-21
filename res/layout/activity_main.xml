@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/buttonLeft"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:text="Left"
+        android:onClick="sendCommand" />
+
+    <Button
+        android:id="@+id/buttonRight"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:text="Right"
+        android:onClick="sendCommand" />
+
+    <Button
+        android:id="@+id/buttonBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonForward"
+        android:layout_below="@+id/buttonRight"
+        android:layout_marginTop="20dp"
+        android:onClick="sendCommand"
+        android:text="Backward" />
+
+    <Button
+        android:id="@+id/buttonForward"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLeft"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:onClick="sendCommand"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/textConnection"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textResponse"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Connection"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textConnection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Server Response"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="240dp"
+        android:layout_height="135dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/alert_light_frame" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonBackward"
+        android:layout_toLeftOf="@+id/buttonRight"
+        android:onClick="sendCommand"
+        android:text="Stop" />
+
+</RelativeLayout>
